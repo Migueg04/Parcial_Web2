@@ -17,6 +17,22 @@ export function AppContextProvider({ children }: PropsWithChildren) {
 	const [message, setMessage] = useState(defaultMessage);
 	const [availableRooms, setAvailableRooms] = useState(dataRoom)
 	console.log(availableRooms);
+
+	const [filters, setFilters] = useState({
+		type:"",
+		available: ""
+	})
+	const filteredRooms = availableRooms.filter((room) =>{
+		if(availableRooms){
+			
+		}
+
+		return(
+			(filters.type === "" || room.type === filters.type)//&&
+			//(filters.available === "" || room.available === filters.available)
+			
+		)
+	})
 	
 
 	const value = {
@@ -25,7 +41,7 @@ export function AppContextProvider({ children }: PropsWithChildren) {
 		resetMessage: () => setMessage(defaultMessage),
 	};
 
-	return <AppContext.Provider value={{availableRooms}}>
+	return <AppContext.Provider value={{availableRooms, filters, filteredRooms, setFilters}}>
 		{children}
 	</AppContext.Provider>;
 }
