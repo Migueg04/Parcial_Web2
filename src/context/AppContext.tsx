@@ -23,16 +23,22 @@ export function AppContextProvider({ children }: PropsWithChildren) {
 		available: ""
 	})
 	const filteredRooms = availableRooms.filter((room) =>{
-		if(availableRooms){
-			
-		}
 
 		return(
-			(filters.type === "" || room.type === filters.type)//&&
-			//(filters.available === "" || room.available === filters.available)
+			(filters.type === "" || room.type === filters.type)&&
+			(filters.available === "" || room.available === filters.available)
 			
 		)
 	})
+
+	const [reservedId, setReservedId] = useState([])
+	const toggleReserve = (id) => {
+		setReservedId((prev) =>
+			prev.includes(id)
+				?prev.filter((itemId) => itemId! == id)
+				:[...prev,id]
+		)
+	}
 	
 
 	const value = {
@@ -41,7 +47,7 @@ export function AppContextProvider({ children }: PropsWithChildren) {
 		resetMessage: () => setMessage(defaultMessage),
 	};
 
-	return <AppContext.Provider value={{availableRooms, filters, filteredRooms, setFilters}}>
+	return <AppContext.Provider value={{reservedId, toggleReserve, availableRooms, filters, filteredRooms, setFilters}}>
 		{children}
 	</AppContext.Provider>;
 }

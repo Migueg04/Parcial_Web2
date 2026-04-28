@@ -12,6 +12,9 @@ type Room = {
 
 }
 export const Card = ({room} : {room: Room}) => {
+    const {toggleReserve, reservedId, availableRooms} = useContext(AppContext)
+
+    const isReserved = reservedId.includes(availableRooms.id)
     return(
         <div>
             <p>{room.id}</p>
@@ -21,7 +24,9 @@ export const Card = ({room} : {room: Room}) => {
             <p>{room.location}</p>
             <p>{room.pricePerHour}</p>
             <p>{room.available}</p>
-            <button>Reservar</button>
+            <button onClick={() => toggleReserve(availableRooms.id)}>
+                {isReserved ? "No disponible" : "Disponible"}
+            </button>
         </div>
     )
 }

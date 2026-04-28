@@ -6,7 +6,7 @@ export const dataRoom = [
     "capacity": 10,
     "location": "Floor 2",
     "pricePerHour": 45000,
-    "available": true
+    "available": "disponible"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@ export const dataRoom = [
     "capacity": 4,
     "location": "Floor 3",
     "pricePerHour": 60000,
-    "available": true
+    "available": "disponible"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@ export const dataRoom = [
     "capacity": 1,
     "location": "North Area",
     "pricePerHour": 18000,
-    "available": true
+    "available": "disponible"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@ export const dataRoom = [
     "capacity": 8,
     "location": "Floor 1",
     "pricePerHour": 50000,
-    "available": false
+    "available": "no disponible"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@ export const dataRoom = [
     "capacity": 14,
     "location": "Floor 5",
     "pricePerHour": 75000,
-    "available": true
+    "available": "disponible"
   },
   {
     "id": 6,
@@ -51,7 +51,7 @@ export const dataRoom = [
     "capacity": 2,
     "location": "Floor 4",
     "pricePerHour": 42000,
-    "available": false
+    "available": "no disponible"
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@ export const dataRoom = [
     "capacity": 1,
     "location": "Central Area",
     "pricePerHour": 15000,
-    "available": true
+    "available": "disponible"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@ export const dataRoom = [
     "capacity": 6,
     "location": "Floor 2",
     "pricePerHour": 48000,
-    "available": true
+    "available": "disponible"
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@ export const dataRoom = [
     "capacity": 6,
     "location": "Floor 1",
     "pricePerHour": 38000,
-    "available": true
+    "available": "disponible"
   },
   {
     "id": 10,
@@ -87,6 +87,6 @@ export const dataRoom = [
     "capacity": 3,
     "location": "Floor 6",
     "pricePerHour": 55000,
-    "available": true
+    "available": "disponible"
   }
 ]
